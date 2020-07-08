@@ -4,11 +4,13 @@ call plug#begin('~/.config/nvim/autoload')
 	Plug 'dart-lang/dart-vim-plugin'
 	Plug 'natebosch/vim-lsc-dart'
     "Plug 'reisub0/hot-reload.vim'
-    Plug 'thosakwe/vim-flutter'
+   " Plug 'thosakwe/vim-flutter'
 
 	" Themes
-    Plug 'https://github.com/danilo-augusto/vim-afterglow'
+"   Plug 'https://github.com/danilo-augusto/vim-afterglow'
 "	Plug 'mhinz/vim-janah'
+	Plug 'morhetz/gruvbox'
+"	Plug 'ryanoasis/vim-devicons'
 
 	" Navigation
 	Plug 'scrooloose/nerdtree'
@@ -21,7 +23,7 @@ call plug#begin('~/.config/nvim/autoload')
 
 	"Plug 'tpope/vim-surround'
 	"Plug 'terryma/vim-multiple-cursors'
-"	Plug 'jiangmiao/auto-pairs'
+	Plug 'jiangmiao/auto-pairs'
 	" Config stuff
 	
 "	Plug 'editorconfig/editorconfig-vim'
@@ -33,6 +35,7 @@ call plug#begin('~/.config/nvim/autoload')
 	
 	" Git integrations
 	Plug 'tpope/vim-fugitive'
+	Plug 'vim-airline/vim-airline'
 
     "snippet
     Plug 'sirver/ultisnips'
@@ -40,7 +43,10 @@ call plug#begin('~/.config/nvim/autoload')
     call plug#end()
 
 syntax enable
-colorscheme afterglow
+colorscheme gruvbox
+set encoding=UTF-8
+let g:airline_powerline_fonts = 1
+"guifont=Hack-Bold
 "set autodir
 set number
 set relativenumber
