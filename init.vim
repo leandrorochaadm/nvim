@@ -96,6 +96,11 @@ nnoremap <C-q> :q! <cr>
 nnoremap <C-A-s> :wq! <cr>
 nnoremap <C-f> :/\c <cr>
 
+"fugitive
+nmap<leader>gh :diffget //3<cr>
+nmap<leader>gu :diffget //2<cr>
+nmap<leader>gs :G<cr>
+
 " Ignore files on NERDTree
     let NERDTreeIgnore = [
         \'\.git[[dir]]',
