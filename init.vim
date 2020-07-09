@@ -35,12 +35,16 @@ call plug#begin('~/.config/nvim/autoload')
 	
 	" Git integrations
 	Plug 'tpope/vim-fugitive'
-	Plug 'vim-airline/vim-airline'
+"	Plug 'vim-airline/vim-airline'
 
     "snippet
-    Plug 'sirver/ultisnips'
+	Plug 'sirver/ultisnips'
 
-    call plug#end()
+	" language c#
+"	Plug 'OmniSharp/omnisharp-vim'
+	Plug 'vim-syntastic/syntastic'
+
+	call plug#end()
 
 syntax enable
 colorscheme gruvbox
@@ -51,6 +55,22 @@ let g:airline_powerline_fonts = 1
 set number
 set relativenumber
 set background=dark
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"servidor p/ c#
+"let g:OmniSharp_server_stdio = 1
+"let g:OmniSharp_proc_debug = 1
+"let g:OmniSharp_loglevel = 'debug'
+"let g:OmniSharp_timeout=3
 
 let g:lsc_auto_map = v:true
 let g:lsc_server_commands = {'dart': 'dart_language_server'}
@@ -96,13 +116,20 @@ nnoremap <C-q> :q! <cr>
 nnoremap <C-A-s> :wq! <cr>
 nnoremap <C-f> :/\c <cr>
 
+nnoremap '\' <Nop>
+let mapleader='\'
 "fugitive
-nmap<leader>gh :diffget //3<cr>
-nmap<leader>gu :diffget //2<cr>
+nmap<leader>gj :diffget //3<cr>
+nmap<leader>gf :diffget //2<cr>
 nmap<leader>gs :G<cr>
+
+"trocar janela
+nmap<leader><tab> <C-w>w <cr>
 
 " Ignore files on NERDTree
     let NERDTreeIgnore = [
+		\'\.dart_tool',
+		\'.\slidy/',
         \'\.git[[dir]]',
         \'\.sass-cache[[dir]]',
         \'node_modules[[dir]]',
