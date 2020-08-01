@@ -1,10 +1,10 @@
-call plug#begin('~/.config/nvim/autoload')
+call plug#begin()
 "Flutter
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'dart-lang/dart-vim-plugin'
-	Plug 'natebosch/vim-lsc-dart'
-    "Plug 'reisub0/hot-reload.vim'
-   " Plug 'thosakwe/vim-flutter'
+"	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"	Plug 'dart-lang/dart-vim-plugin'
+"	Plug 'natebosch/vim-lsc-dart'
+"	Plug 'reisub0/hot-reload.vim'
+"	Plug 'thosakwe/vim-flutter'
 
 	" Themes
 "   Plug 'https://github.com/danilo-augusto/vim-afterglow'
