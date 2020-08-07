@@ -1,5 +1,7 @@
 ## Configurações do meu NeoVim
 
+#### [Manual online em português](https://vimbook.gitbook.io/vimbook/)
+
 #### Passos pra instalar
 *Execute esses comandos*
 ~~~shell
